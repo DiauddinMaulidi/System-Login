@@ -25,12 +25,18 @@
         label {
             display: block;
         }
-        button {
-            background-color: orange;
+        .login {
+            background-color: greenyellow;
+        }
+        a {
+            text-decoration: none;
+            color: black;
         }
     </style>
 </head>
 <body>
+
+<h1>Halaman Registrasi</h1>
     
 <form action="" method="post">
     <ul>
@@ -47,7 +53,8 @@
             <input type="password" name="password2" id="password2">
         </li>
         <li>
-            <button type="submit" name="registrasi">Registrasi</button>
+            <button type="submit" class="login" name="registrasi">Registrasi</button>
+            <button type="button" ><a href="login.php">Login</a></button>
         </li>
     </ul>
 </form>
