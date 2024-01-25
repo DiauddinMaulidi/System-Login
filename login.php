@@ -44,9 +44,6 @@ session_start();
         li {
             margin: 10px 0;
         }
-        label {
-            display: block;
-        }
         a {
             text-decoration: none;
             color: black;
@@ -67,12 +64,16 @@ session_start();
 <form action="" method="post">
     <ul>
         <li>
-            <label for="username">Username: </label>
+            <label for="username">Username: </label><br>
             <input type="text" name="username" id="username" autocomplete="off">
         </li>
         <li>
-            <label for="password">Password: </label>
+            <label for="password">Password: </label><br>
             <input type="password" name="password" id="password">
+        </li>
+        <li>
+            <input type="checkbox" name="remember" id="remember">
+            <label for="remember">Remember me</label>
         </li>
         <li>
             <button type="button" class="register"><a href="registrasi.php">register</a></button>
