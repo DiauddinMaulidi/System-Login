@@ -1,3 +1,11 @@
+<?php
+session_start();
+    if ( !isset($_SESSION["login"]) ) {
+        header("location: login.php");
+        exit;
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +22,7 @@
     
 <h1>haii ini adalah halaman sederhana untuk belajar system login</h1>
 <h2>💖💖💖</h2>
-<p>wasalam</p>
+<p><a href="logout.php"><< logout</a></p>
 
 </body>
 </html>

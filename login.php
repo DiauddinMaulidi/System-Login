@@ -1,4 +1,11 @@
 <?php
+session_start();
+    if ( isset($_SESSION["login"]) ) {
+        header("location: index.php");
+        exit;
+    }
+
+
     require "koneksi.php";
 
     if ( isset($_POST["login"]) ) {
@@ -13,6 +20,9 @@
             // lalu kemudian cek password
             $row = mysqli_fetch_assoc($result);
             if ( password_verify($password, $row["password"]) ) {
+                // cek session
+                $_SESSION["login"] = true;
+
                 header("location: index.php");
                 exit;
             }
