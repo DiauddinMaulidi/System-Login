@@ -51,13 +51,17 @@ session_start();
             text-decoration: none;
             color: black;
         }
+        p {
+            color: red;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
 
 <h1>Halaman Login</h1>
 <?php if ( isset($error) ) { ?>
-    <p style="color: red; font-style: italic;">username / password anda salah</p>
+    <p>...</p>
 <?php } ?>
     
 <form action="" method="post">
@@ -76,6 +80,16 @@ session_start();
         </li>
     </ul>
 </form>
+
+<script>
+    let p = document.querySelector("p");
+    p.textContent = "username / password anda salah"
+
+    setTimeout(() => {
+        p.textContent = "";
+    }, 4000);
+
+</script>
 
 </body>
 </html>
